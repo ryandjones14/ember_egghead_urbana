@@ -7,6 +7,16 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('about');
+  this.route('trips', function() {
+    this.route('states', function() {
+      // this.route('show', {path: '/:id'});
+    });
+  });
+  this.route('trips.states', {path: 'trips/states'}, () => {
+    this.route('trips.states.show', {path: '/:id'});
+  });
+  this.route('trips.cities',{path: 'trips/cities'});
 });
 
 export default Router;

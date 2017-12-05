@@ -1,0 +1,10 @@
+<h1>Pick a State</h1>
+<br><br>
+{{link-to 'cities' 'trips.cities'}}
+<br><br>
+{{#each model as |state|}}
+  <ul>
+    <li>{{#link-to 'trips.states.show' state}}{{state.name}}{{/link-to}}</li>
+  </ul>
+{{/each}}
+{{outlet}}
