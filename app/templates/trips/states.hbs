@@ -1,5 +1,10 @@
 <h1>Pick a State</h1>
-<br><br>
+<br>
+{{#wish-list
+    wishList=wishList}}
+    {{debugger}}
+{{/wish-list}}
+<br>
 {{link-to 'cities' 'trips.cities'}}
 <br><br>
 {{#each model as |state|}}

@@ -1,6 +1,11 @@
 <h1>go somewhere</h1>
-<br><br>
+<br>
+{{#wish-list
+    wishList=wishList}}
+    {{debugger}}
+{{/wish-list}}
+<br>
 {{link-to 'cities' 'trips.cities'}}
 {{link-to 'states' 'trips.states'}}
-{{wish-list}}
+
 {{outlet}}

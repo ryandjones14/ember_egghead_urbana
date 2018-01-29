@@ -1,11 +1,17 @@
 <h1>Pick a City</h1>
 <br><br>
 {{link-to 'states' 'trips.states'}}
-<br><br>
+<br>
+{{#wish-list
+    wishList=wishList}}
+    {{debugger}}
+{{/wish-list}}
+<br>
 {{#each model as |city|}}
   <ul>
     <li>{{city.name}}</li>
-    <li>{{location-card}}</li>
+    {{!-- <li>{{location-card}}</li>     --}}
+    {{location-card handleClick=(action 'addToWishList' city.name)}}
   </ul>
 {{/each}}
 {{outlet}}

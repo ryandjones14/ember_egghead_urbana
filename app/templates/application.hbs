@@ -1,5 +1,11 @@
 <h2 id='title'>Hello, {{name}}!</h2>
 <br>
+{{#each wishList as |location|}}
+<ul>
+    <li>{{location}}</li>
+</ul>
+{{/each}}
+<br>
 {{link-to 'Home' 'application'}}
 {{link-to 'About' 'about'}}
 {{link-to 'Trips' 'trips'}}
